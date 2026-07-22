@@ -13,14 +13,6 @@ pipeline {
     choice(name: 'SUITE', choices: ['all', 'smoke', 'regression'], description: 'Which suite to run')
     choice(name: 'BROWSER', choices: ['chromium', 'firefox', 'webkit', 'all'], description: 'Browser project')
   }
-
-  options {
-    timeout(time: 30, unit: 'MINUTES')
-    ansiColor('xterm')
-    timestamps()
-    buildDiscarder(logRotator(numToKeepStr: '20'))
-  }
-
   environment {
     ENV = "${params.ENV}"
     CI  = 'true'
