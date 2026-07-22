@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@nova.com",
+      "password": "$2a$10$Owa8ni3KJKYrn8JVgO1d2.rXKOUl.CCkZeBXNcewspAFTLEANQiIq",
+      "role": "admin",
+      "createdAt": "2026-07-20T17:43:21.029Z"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Noise-Cancelling Headphones",
+      "price": 89.99,
+      "oldPrice": 119.99,
+      "category": "Electronics",
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+      "description": "Premium over-ear wireless headphones.",
+      "featured": true,
+      "rating": 4.6,
+      "reviews": 212,
+      "createdAt": "2026-07-20T17:43:21.029Z"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch Series 7",
+      "price": 199,
+      "oldPrice": null,
+      "category": "Electronics",
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+      "description": "Track fitness, calls and notifications.",
+      "featured": true,
+      "rating": 4.8,
+      "reviews": 540,
+      "createdAt": "2026-07-20T17:43:21.029Z"
+    },
+    {
+      "id": 3,
+      "name": "Handcrafted Leather Backpack",
+      "price": 64.5,
+      "oldPrice": null,
+      "category": "Accessories",
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+      "description": "Full-grain leather backpack.",
+      "featured": false,
+      "rating": 4.4,
+      "reviews": 98,
+      "createdAt": "2026-07-20T17:43:21.029Z"
+    }
+  ],
+  "orders": [],
+  "seq": {
+    "users": 1,
+    "products": 3,
+    "orders": 0
+  }
+}

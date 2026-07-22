@@ -1,0 +1,9 @@
+node_modules/
+app/node_modules/
+app/db.test.json
+app/db.json
+playwright-report/
+test-results/
+results/
+*.log
+.DS_Store

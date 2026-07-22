@@ -1,0 +1,27 @@
+{
+  "name": "novastore-e2e",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript Page Object Model test framework for Nova Store",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "report": "playwright show-report playwright-report",
+    "install:browsers": "playwright install --with-deps",
+    "app:install": "npm --prefix app install",
+    "app:start": "node --env-file=app/.env.test app/server.js",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": ["playwright", "typescript", "pom", "e2e", "novastore"],
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.0",
+    "dotenv": "^16.4.5",
+    "typescript": "^5.6.0"
+  }
+}

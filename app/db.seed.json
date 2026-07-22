@@ -1,0 +1,203 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@nova.com",
+      "password": "$2a$10$F8nOEy8BUW7atjyW55U04uOsXL.HA7ioW8m32q1VMS7llEiCm1Q3K",
+      "role": "admin",
+      "createdAt": "2026-07-08T03:19:31.552Z"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "$2a$10$oR4zgp6.Cbn5fljjBOEQRuBanT/MY8guSyHOfibBUcLu3mxqlJyti",
+      "role": "user",
+      "createdAt": "2026-07-08T03:20:31.083Z"
+    },
+    {
+      "id": 3,
+      "name": "John Doe2",
+      "email": "john2@example.com",
+      "password": "$2a$10$m36v8l8c50GjwZHStENYF.w2NqzgLnnqMUgqHe9iemYkgXM1KrV6W",
+      "role": "user",
+      "createdAt": "2026-07-08T03:21:08.864Z"
+    },
+    {
+      "id": 4,
+      "name": "sujan",
+      "email": "sujan@gmail.com",
+      "password": "$2a$10$GhVcY9RfesZxpZ341hjmXeXum3eWwogq361JHPzMptHCq7Xxih9hy",
+      "role": "user",
+      "createdAt": "2026-07-09T08:07:34.567Z"
+    },
+    {
+      "id": 5,
+      "name": "sushant",
+      "email": "sushant@gmail.com",
+      "password": "$2a$10$ISkvYCYnSrcu0AQqD.ue4.LyLshw.i1WZP6O3f2vmPRgsgO9wvkIi",
+      "role": "user",
+      "createdAt": "2026-07-09T08:12:24.492Z"
+    },
+    {
+      "id": 6,
+      "name": "test",
+      "email": "test123@gmail.com",
+      "password": "$2a$10$tC3YoV0li59DPgyGnClIReL5sGh5oNUsHIcfOd4sJIlvGHdU/yqee",
+      "role": "user",
+      "createdAt": "2026-07-09T08:15:25.459Z"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Noise-Cancelling Headphones",
+      "price": 89.99,
+      "oldPrice": 119.99,
+      "category": "Electronics",
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500",
+      "description": "Premium over-ear wireless headphones.",
+      "featured": true,
+      "rating": 4.6,
+      "reviews": 212,
+      "createdAt": "2026-07-08T03:19:31.552Z"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch Series 7",
+      "price": 199,
+      "oldPrice": null,
+      "category": "Electronics",
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+      "description": "Track fitness, calls and notifications.",
+      "featured": true,
+      "rating": 4.8,
+      "reviews": 540,
+      "createdAt": "2026-07-08T03:19:31.552Z"
+    },
+    {
+      "id": 3,
+      "name": "Handcrafted Leather Backpack",
+      "price": 64.5,
+      "oldPrice": null,
+      "category": "Accessories",
+      "stock": 40,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+      "description": "Full-grain leather backpack.",
+      "featured": false,
+      "rating": 4.4,
+      "reviews": 98,
+      "createdAt": "2026-07-08T03:19:31.552Z"
+    },
+    {
+      "id": 4,
+      "name": "Bluetooth Speaker",
+      "price": 39.99,
+      "oldPrice": null,
+      "category": "Electronics",
+      "stock": 48,
+      "image": null,
+      "description": null,
+      "featured": true,
+      "rating": 4,
+      "reviews": 0,
+      "createdAt": "2026-07-08T03:24:29.193Z"
+    },
+    {
+      "id": 5,
+      "name": "HeadPhone",
+      "price": 199,
+      "oldPrice": null,
+      "category": "Electronics",
+      "stock": 40,
+      "image": "https://www.bing.com/images/search?view=detailV2&ccid=rb89dg%2fi&id=546AE3E0CF4463B3A6B43004B87C616F0E6F645B&thid=OIP.rb89dg_ivDImmRb5F4HFWgHaEK&mediaurl=https%3a%2f%2fimages.imyfone.com%2ffilme%2fassets%2farticle%2fimage-convert-to-url.jpeg&exph=450&expw=800&q=image+link+url&FORM=IRPRST&ck=D065009E5C4C69C46199D90261B9C852&selectedIndex=0&itb=0",
+      "description": "headles",
+      "featured": false,
+      "rating": 4,
+      "reviews": 0,
+      "createdAt": "2026-07-09T08:18:01.853Z"
+    },
+    {
+      "id": 6,
+      "name": "comic book",
+      "price": 9.88,
+      "oldPrice": null,
+      "category": "Books",
+      "stock": 19,
+      "image": null,
+      "description": null,
+      "featured": true,
+      "rating": 4,
+      "reviews": 0,
+      "createdAt": "2026-07-09T08:19:08.305Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 3,
+      "customer": {
+        "name": "John Doe2",
+        "email": "john2@example.com",
+        "phone": "1234567890",
+        "address": "qwww",
+        "city": "dccc12345",
+        "zip": "12345"
+      },
+      "items": [
+        {
+          "id": 4,
+          "name": "Bluetooth Speaker",
+          "price": 39.99,
+          "qty": 2
+        }
+      ],
+      "subtotal": 79.98,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 6.3984000000000005,
+      "total": 86.3784,
+      "status": "Delivered",
+      "payment": "card",
+      "cardLast4": "4242",
+      "createdAt": "2026-07-08T03:29:49.427Z"
+    },
+    {
+      "id": 2,
+      "userId": 6,
+      "customer": {
+        "name": "test",
+        "email": "test123@gmail.com",
+        "phone": "89898990909",
+        "address": "nmakla",
+        "city": "jka",
+        "zip": "12345"
+      },
+      "items": [
+        {
+          "id": 6,
+          "name": "comic book",
+          "price": 9.88,
+          "qty": 1
+        }
+      ],
+      "subtotal": 9.88,
+      "discount": 0.9880000000000001,
+      "shipping": 6.99,
+      "tax": 0.7113600000000001,
+      "total": 16.59336,
+      "status": "Delivered",
+      "payment": "card",
+      "cardLast4": "4444",
+      "createdAt": "2026-07-09T08:26:23.107Z"
+    }
+  ],
+  "seq": {
+    "users": 6,
+    "products": 6,
+    "orders": 2
+  }
+}
