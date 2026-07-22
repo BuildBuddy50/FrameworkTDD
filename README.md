@@ -3,6 +3,7 @@
 Playwright + TypeScript **Page Object Model** framework for the Nova Store
 application, with a smoke suite, a regression suite, multi-environment
 support, and a ready-to-run Jenkins pipeline.
+C:\Users\biswaranjan patra\Downloads\novastore-e2e\tests
 
 ## Stack
 
