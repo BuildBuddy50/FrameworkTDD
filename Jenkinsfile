@@ -5,11 +5,7 @@
 // ============================================================
 pipeline {
   agent {
-    docker {
-      image 'mcr.microsoft.com/playwright:v1.48.0-jammy'
-      // Run as root so npm can write; give the container a TTY.
-      args '-u root:root --ipc=host'
-    }
+    label 'local'
   }
 
   parameters {
