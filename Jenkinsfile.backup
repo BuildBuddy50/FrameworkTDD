@@ -23,18 +23,10 @@ pipeline {
                description: 'Browser project')
     }
 
-    options {
-        timestamps()
-        ansiColor('xterm')
-        timeout(time: 45, unit: 'MINUTES')
-        buildDiscarder(logRotator(numToKeepStr: '20'))
-    }
 
     environment {
         ENV = "${params.ENV}"
         CI  = "true"
-        // Deployed target: skip the local webServer block entirely.
-        NO_WEBSERVER = "${params.ENV == 'prod' ? '1' : ''}"
     }
 
     stages {
@@ -48,28 +40,9 @@ pipeline {
             }
         }
 
-        stage('Install Browsers') {
-            steps {
-                bat 'npx playwright install --with-deps chromium'
-            }
-        }
-
         stage('Lint') {
             steps {
-                // Do not fail the build if no lint script is defined.
-                bat 'npm run lint --if-present'
-            }
-        }
-
-        stage('Wake API') {
-            when { expression { params.ENV == 'prod' } }
-            steps {
-                // Render free tier sleeps after 15 min idle; the first
-                // request can take ~30s. Absorb that here, not in a test.
-                bat '''
-                    curl -s -m 90 https://novastore-fk1k.onrender.com/api/health
-                    exit /b 0
-                '''
+                bat 'npm run lint'
             }
         }
 
@@ -91,11 +64,7 @@ pipeline {
                         browserFlag = "--project=${params.BROWSER}"
                     }
 
-                    // Prod shares one live dataset across tests, so run
-                    // serially to avoid cross-test interference.
-                    def workerFlag = (params.ENV == 'prod') ? '--workers=1' : ''
-
-                    bat "npx playwright test ${suiteFlag} ${browserFlag} ${workerFlag}"
+                    bat "npx playwright test ${suiteFlag} ${browserFlag}"
                 }
             }
         }
@@ -125,7 +94,7 @@ pipeline {
         }
 
         failure {
-            echo "Tests failed on ENV=${params.ENV} — see the Playwright Report."
+            echo 'Tests failed — see the Playwright Report.'
         }
 
         cleanup {
