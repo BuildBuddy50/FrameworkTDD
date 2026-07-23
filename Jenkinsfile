@@ -11,7 +11,7 @@ pipeline {
 
     parameters {
         choice(name: 'ENV',
-               choices: ['local', 'dev', 'qa'],
+               choices: ['local', 'dev', 'qa', 'prod'],
                description: 'Target environment')
 
         choice(name: 'SUITE',
