@@ -39,8 +39,8 @@ const CONFIGS: Record<EnvName, EnvConfig> = {
   },
   prod: {
     name: 'prod',
-    baseURL: process.env.BASE_URL || 'https://novastore.example',
-    apiURL: process.env.API_URL || 'https://novastore.example/api',
+    baseURL: process.env.BASE_URL || 'https://buildbuddy50.github.io/novastore',
+    apiURL: process.env.API_URL || 'https://novastore-fk1k.onrender.com/api',
   },
 };
 
