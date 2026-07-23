@@ -22,14 +22,6 @@ pipeline {
                choices: ['chromium', 'firefox', 'webkit', 'all'],
                description: 'Browser project')
     }
-
-    options {
-        timestamps()
-        ansiColor('xterm')
-        timeout(time: 45, unit: 'MINUTES')
-        buildDiscarder(logRotator(numToKeepStr: '20'))
-    }
-
     environment {
         ENV = "${params.ENV}"
         CI  = "true"
