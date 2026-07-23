@@ -33,7 +33,7 @@ export abstract class BasePage {
    * Load the app and pin its API base to the environment under test.
    * Uses an init script so localStorage is set before any app JS runs.
    */
-  async open(path = '/'): Promise<void> {
+  async open(path = ''): Promise<void> {
     await this.page.addInitScript((apiBase) => {
       window.localStorage.setItem('ns_api_base', apiBase);
       // Start each test from a clean cart/session.
